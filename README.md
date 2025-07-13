@@ -1,50 +1,86 @@
-# Welcome to your Expo app 👋
+# 📦 React Native + Expo + Supabase Starter
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A minimal yet powerful starter to quickly launch a mobile app using Expo and Supabase, including:
 
-## Get started
+-   🔐 Authentication (sign up / sign in)
 
-1. Install dependencies
+-   ⚛️ React authentication context
 
-   ```bash
-   npm install
-   ```
+-   💅 Clear and extensible structure
 
-2. Start the app
+-   📱 Android / iOS / Web compatible
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## 🚀 Getting Started
 
 ```bash
-npm run reset-project
+git clone https://github.com/your-user/your-starter.git
+cd your-starter
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🧠 Features
 
-To learn more about developing your project with Expo, look at the following resources:
+-   ✅ Supabase Auth (login, signup, auto-refresh)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+-   🧭 React Navigation for screen transitions
 
-## Join the community
+-   ⚙️ Global Auth Context (AuthProvider)
 
-Join our community of developers creating universal apps.
+-   🧱 Simple and modular project structure
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+-   ✨ TypeScript with strict mode enabled
+
+---
+
+## 🗂️ Project Structure
+
+```
+.
+├── app/
+│ ├── (auth)/ # Login / Signup screens
+│ ├── (app)/ # Protected app area
+│ └── \_layout.tsx # Navigation layout management
+├── components/ # Shared UI components
+├── context/AuthProvider # Global auth context
+├── utils/supabase.ts # Supabase client instance
+├── tsconfig.json
+└── ...
+```
+
+---
+
+## 🔑 Supabase Setup
+
+1. Create a project on supabase.com
+
+2. Go to Project Settings > API
+
+3. Copy your anon key and project URL
+
+4. Create a .env file at the root:
+
+```ini
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_ANON_KEY=your-anon-key
+```
+
+5. Make sure your Supabase client uses these environment variables.
+
+---
+
+## 📄 Scripts
+
+```bash
+npm run start # Start the app with Expo
+npm run lint # Lint the codebase
+npm run build # (optional, if needed)
+```
+
+---
+
+## 🧑‍💻 Author
+
+Made with ❤️ by @vandevelde-dimitri
